@@ -1,0 +1,19 @@
+# Auto-detect text files and ensure LF on checkout
+* text=auto
+
+# Shell scripts MUST use LF
+gradlew text eol=lf
+*.sh text eol=lf
+
+# Windows scripts use CRLF
+gradlew.bat text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binaries — no conversion
+*.jar binary
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.keystore binary
